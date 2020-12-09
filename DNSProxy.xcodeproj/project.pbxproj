@@ -68,7 +68,7 @@
 		AF5BC60925800DB1006A3FB8 /* DNSLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSLogger.swift; sourceTree = "<group>"; };
 		AF5BC60E25801339006A3FB8 /* DNSSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSSettingsManager.swift; sourceTree = "<group>"; };
 		AF5BC62325801A79006A3FB8 /* DNSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSConstants.swift; sourceTree = "<group>"; };
-		AFA4D7DE2581200F00E39322 /* ReadME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadME.md; sourceTree = "<group>"; };
+		AFA4D7DE2581200F00E39322 /* ReadME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = ReadME.md; path = DNSProxy/View/ReadME.md; sourceTree = "<group>"; };
 		AFC9A5D4257E640800A4F56F /* DNSProxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNSProxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC9A5D7257E640800A4F56F /* NetworkLogsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogsApp.swift; sourceTree = "<group>"; };
 		AFC9A5D9257E640800A4F56F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -141,6 +141,7 @@
 		AFC9A5CB257E640800A4F56F = {
 			isa = PBXGroup;
 			children = (
+				AFA4D7DE2581200F00E39322 /* ReadME.md */,
 				AFC9A5D6257E640800A4F56F /* DNSProxy */,
 				AFC9A5E8257E640C00A4F56F /* DNSProxyTests */,
 				AF5BC5C7257FF90E006A3FB8 /* DNSProxy-Extenstion */,
@@ -212,7 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				AFC9A5D9257E640800A4F56F /* ContentView.swift */,
-				AFA4D7DE2581200F00E39322 /* ReadME.md */,
 			);
 			path = View;
 			sourceTree = "<group>";
