@@ -22,11 +22,11 @@ class NetworkLogViewModel: ObservableObject {
     }
 
     func disableLogging() {
-        proxyManager.enable()
+        proxyManager.disable()
     }
 
     func applyDNSSettings() {
-        dnsSettingsManager.configure()
+        proxyManager.enable()
     }
 
     func removeDNSSettings() {

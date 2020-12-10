@@ -23,8 +23,8 @@ class DNSSettingsManager {
     }
 
     func removeSettings() {
-        manager.removeFromPreferences { _ in
-
+        manager.removeFromPreferences { error in
+            debugPrint("DNSProxySample \(String(describing: error))")
         }
     }
 
@@ -33,23 +33,23 @@ class DNSSettingsManager {
     private func loadAndUpdatePreferences(_ completion: @escaping () -> Void) {
         manager.loadFromPreferences { [weak self] error in
             guard error == nil else {
-                debugPrint("DNSProxySample.App: load error")
+                debugPrint("DNSProxySample: load error")
                 return
             }
 
-            let dohSettings = NEDNSOverHTTPSSettings(servers: ["https://dns.google/dns-query"])
-            dohSettings.serverURL = URL(string: Constants.dohUrl)
+            let dohSettings = NEDNSOverHTTPSSettings(servers: ["8.8.4.4"])
+            dohSettings.serverURL = URL(string: Constants.dohUrl + "dns-query")
             self?.manager.dnsSettings = dohSettings
 
             completion()
 
             self?.manager.saveToPreferences { (error) in
                 guard error == nil else {
-                    debugPrint("DNSProxySample.App: save error")
+                    debugPrint("DNSProxySample: save error")
                     return
                 }
 
-                debugPrint("DNSProxySample.App: saved")
+                debugPrint("DNSProxySample: saved")
             }
         }
     }

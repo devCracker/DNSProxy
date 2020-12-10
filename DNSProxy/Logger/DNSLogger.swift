@@ -26,10 +26,11 @@ class DNSLogger {
     // MARK: Functions
 
     func log(message value: String) {
-        logger.log("messsge: \(value)")
+        logger.log("message \(value, privacy: .public)")
+
     }
 
     func log(error value: String) {
-        logger.error("error: \(value)")
+        logger.error("error: \(value, privacy: .public)")
     }
 }

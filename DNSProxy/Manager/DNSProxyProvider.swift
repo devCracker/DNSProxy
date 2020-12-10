@@ -44,6 +44,7 @@ class DNSProxyProvider: NEDNSProxyProvider {
 private extension DNSProxyProvider {
 
     func logTCPRequest(with flowRequest: NEAppProxyTCPFlow) {
+        NSLog("logTCPRequest")
         if let remoteHost = (flowRequest.remoteEndpoint as? NWHostEndpoint)?.hostname {
             DNSLogger.shared.log(message: "DNSProxyProvider TCP HOST : \(remoteHost)")
         }
@@ -53,6 +54,8 @@ private extension DNSProxyProvider {
     }
 
     func logUDPRequest(with flowRequest: NEAppProxyUDPFlow) {
+        NSLog("logUDPRequest %@", flowRequest)
+
         if let localHost = (flowRequest.localEndpoint as? NWHostEndpoint)?.hostname {
             DNSLogger.shared.log(message: "DNSProxyProvider UDP HOST : \(localHost)")
         }
